@@ -325,18 +325,18 @@ function parseYAML(text) {
   const removed = { description: '' };
 
   if (meta.added) {
-    added.version = meta.added.join(', ');
+    added.version = meta.added;
     added.description = `<span>Added in: ${added.version}</span>`;
   }
 
   if (meta.deprecated) {
-    deprecated.version = meta.deprecated.join(', ');
+    deprecated.version = meta.deprecated;
     deprecated.description =
         `<span>Deprecated since: ${deprecated.version}</span>`;
   }
 
   if (meta.removed) {
-    removed.version = meta.removed.join(', ');
+    removed.version = meta.removed;
     removed.description = `<span>Removed in: ${removed.version}</span>`;
   }
 
