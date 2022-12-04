@@ -326,7 +326,7 @@ function parseYAML(text) {
 
   if (meta.added) {
     added.version = meta.added;
-    added.description = `<span>Added in: ${added.version}</span>`;
+    added.description = `<span>Added in: ${added.version.join(', ')}</span>`;
   }
 
   if (meta.deprecated) {
