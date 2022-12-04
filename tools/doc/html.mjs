@@ -337,7 +337,7 @@ function parseYAML(text) {
 
   if (meta.removed) {
     removed.version = meta.removed;
-    removed.description = `<span>Removed in: ${removed.version}</span>`;
+    removed.description = `<span>Removed in: ${removed.version.join(', ')}</span>`;
   }
 
   if (meta.changes.length > 0) {
