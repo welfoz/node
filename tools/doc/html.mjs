@@ -332,7 +332,7 @@ function parseYAML(text) {
   if (meta.deprecated) {
     deprecated.version = meta.deprecated;
     deprecated.description =
-        `<span>Deprecated since: ${deprecated.version}</span>`;
+        `<span>Deprecated since: ${deprecated.version.join(', ')}</span>`;
   }
 
   if (meta.removed) {
